@@ -79,7 +79,6 @@ contract CineContract {
             if(keccak256(abi.encodePacked(_titulo)) == keccak256(abi.encodePacked(s_peliculas[i].titulo))) {
                 s_peliculas[i] = s_peliculas[tamano - 1];
                 s_peliculas.pop();
-                s_peliculas[i].agregada = false;
                 
                 emit CineContract_PeliculaEliminada(_titulo);
                 return;
